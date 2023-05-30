@@ -1,0 +1,26 @@
+pipeline {
+    agent {'lable dotnet6' }
+    stages{
+       staage('vcs') {
+           steps{
+              git branch: 'main',
+                  URL: https: 'github.com/anildevopsqt/MusicStore.git'
+    } 
+}
+        staage('build') {
+            steps{
+                sh 'dotnet restore ./MusicStore/MusicStore.csproj'
+                sh ' dotnet build ./MusicStore/MusicStore.csproj'
+            }
+        }
+        staage('test') {
+            steps{
+                sh  'dotnet build ./MusicStoretest/MusicStoretest.csproj'
+            }
+        }
+       }
+    }
+
+    
+
+ 
