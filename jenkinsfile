@@ -1,5 +1,5 @@
 pipeline {
-    agent {'lable dotnet6' }
+    agent {'lable dotnet6'}
     stages{
        staage('vcs') {
            steps{
