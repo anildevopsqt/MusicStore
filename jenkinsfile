@@ -1,5 +1,5 @@
 pipeline {
-    agent {' specified'}
+    agent {' dotnet6'}
     stages{
        stage('vcs') {
            steps{
