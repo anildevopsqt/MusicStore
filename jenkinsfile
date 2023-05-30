@@ -4,7 +4,7 @@ pipeline {
        staage('vcs') {
            steps{
               git branch: 'main',
-                  URL: https: 'github.com/anildevopsqt/MusicStore.git'
+                  URL: 'https//github.com/anildevopsqt/MusicStore.git'
     } 
 }
         staage('build') {
