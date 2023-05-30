@@ -1,12 +1,13 @@
 pipeline {
-    agent any
+    agent {label 'node 1'}
     stages{
        stage('vcs') {
            steps{
               git branch: 'main',
                   url: 'https//github.com/anildevopsqt/MusicStore.git'
-    } 
-}
+           }
+       }
+           
         stage('build') {
             steps{
                 sh 'dotnet restore ./MusicStore/MusicStore.csproj'
@@ -15,7 +16,3 @@ pipeline {
         }
        }
     }
-
-    
-
- 
