@@ -13,9 +13,9 @@ pipeline {
                 sh ' dotnet build ./MusicStore/MusicStore.csproj'
             }
         }
-        stage('test')  {
+        stage('test') {
             steps{
-                sh  'dotnet build ./MusicStoretest/MusicStoretest.csproj'
+                sh  'dotnet build ./MusicStore test/MusicStore test.csproj'
             }
         }
        }
