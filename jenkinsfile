@@ -1,5 +1,5 @@
 pipeline {
-    agent ['label dotnet']
+    agent any
     stages{
        stage('vcs') {
            steps{
