@@ -1,10 +1,10 @@
 pipeline {
-    agent {'lable dotnet6'}
+    agent {'any'}
     stages{
        stage('vcs') {
            steps{
               git branch: 'main',
-                  URL: 'https//github.com/anildevopsqt/MusicStore.git'
+                  url: 'https//github.com/anildevopsqt/MusicStore.git'
     } 
 }
         stage('build') {
